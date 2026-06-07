@@ -1,0 +1,324 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Área Privada Gonza Mindset</title>
+
+<style>
+body{
+margin:0;
+font-family:'Segoe UI',sans-serif;
+color:#fff;
+background:
+radial-gradient(circle at top center, rgba(255,0,0,.20), transparent 30%),
+linear-gradient(135deg,#020202,#0a0a0a 35%,#150000 100%);
+background-attachment:fixed;
+}
+header{
+text-align:center;
+padding:90px 20px;
+background:linear-gradient(to bottom, rgba(255,0,0,.12), transparent);
+}
+.container{max-width:1100px;margin:auto;padding:25px}
+.btn{
+display:block;width:100%;
+padding:28px;margin:16px 0;
+border:none;border-radius:18px;
+font-size:1.35rem;font-weight:800;
+letter-spacing:1.5px;
+color:#fff;cursor:pointer;
+background:linear-gradient(135deg,#2b2b2b,#4a4a4a,#6a6a6a);
+box-shadow:0 15px 40px rgba(0,0,0,.35);
+border:1px solid rgba(255,255,255,.08);
+transition:.3s;
+text-transform:uppercase;
+}
+.btn:hover{
+transform:translateY(-4px) scale(1.01);
+box-shadow:0 20px 55px rgba(0,0,0,.45);
+}
+.section{display:none}
+.video{
+background:rgba(15,15,15,.92);
+border:1px solid rgba(255,255,255,.05);
+border-radius:24px;
+padding:18px;
+margin:18px 0;
+box-shadow:0 15px 40px rgba(0,0,0,.55);
+backdrop-filter:blur(12px);
+}
+.video-title{
+color:#ffffff;
+font-size:1.25rem;
+font-weight:800;
+text-align:center;
+letter-spacing:1px;
+}
+.cover-thumb{
+height:260px;
+border-radius:20px;
+overflow:hidden;
+position:relative;
+cursor:pointer;
+background:
+linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.4)),
+url('primeros-pasos-portada.png') center/cover no-repeat;
+border:1px solid rgba(255,255,255,.08);
+}
+.cover-thumb:before{
+content:'';
+position:absolute;
+inset:0;
+background:linear-gradient(135deg,transparent,rgba(255,255,255,.05));
+}
+.cover-thumb:after{
+content:'▶';
+position:absolute;
+top:50%;left:50%;
+transform:translate(-50%,-50%);
+font-size:90px;
+
+}
+.back-arrow{
+position:fixed;top:20px;left:20px;
+font-size:42px;color:#ffffff;
+font-weight:bold;cursor:pointer;z-index:9999;display:none;
+}
+h1{
+
+letter-spacing:2px;
+}
+h2{
+color:#ffffff;
+text-transform:uppercase;
+}
+</style>
+
+<script>
+function show(id){
+document.querySelectorAll('.section').forEach(s=>s.style.display='none');
+document.getElementById(id).style.display='block';
+}
+
+let historial = ['home'];
+
+function volver(){
+    document.getElementById('youtubePlayer').src='';
+    if(historial.length > 1){
+        historial.pop();
+        const anterior = historial[historial.length - 1];
+        document.querySelectorAll('.section').forEach(s=>s.style.display='none');
+        document.getElementById(anterior).style.display='block';
+        document.getElementById('backArrow').style.display =
+            (anterior === 'home') ? 'none' : 'block';
+    }
+}
+
+const originalShow = show;
+show = function(id){
+    document.querySelectorAll('.section').forEach(s=>s.style.display='none');
+    document.getElementById(id).style.display='block';
+
+    if(historial[historial.length - 1] !== id){
+        historial.push(id);
+    }
+
+    document.getElementById('backArrow').style.display =
+        (id === 'home') ? 'none' : 'block';
+}
+
+</script>
+
+<script>
+function playVideo(url,titulo){
+const actual = historial[historial.length-1];
+if(actual !== 'playerSection'){
+    historial.push('playerSection');
+}
+document.querySelectorAll('.section').forEach(s=>s.style.display='none');
+document.getElementById('playerSection').style.display='block';
+document.getElementById('videoTitle').innerText=titulo;
+document.getElementById('backArrow').style.display='block';
+document.getElementById('youtubePlayer').src=url + (url.includes('?') ? '&' : '?') + 'autoplay=1&rel=0';
+}
+</script>
+</head>
+
+<body><div id="backArrow" class="back-arrow" onclick="volver()">←</div>
+<header>
+<h1 style="font-size:4rem;margin-bottom:10px;">🔒 Área Privada Gonza Mindset</h1>
+<p style="color:#444;font-size:1.2rem;letter-spacing:3px;">
+DISCIPLINA • PODER • ESTATUS • MENTALIDAD DE ÉLITE
+</p>
+
+<div style="width:180px;height:5px;background:linear-gradient(90deg,#4a0000,#ff2b2b,#4a0000);margin:25px auto;border-radius:50px;box-shadow:0 0 20px rgba(255,0,0,.5);"></div>
+</header>
+
+<div class="container">
+
+<div id="home" class="section" style="display:block">
+<button class="btn" onclick="show('reprograma')">Reprograma Tu Mente</button>
+<button class="btn" onclick="show('sala')">Sala de Mindset</button>
+
+
+<div style="margin-top:35px;padding:25px;border-radius:18px;
+background:rgba(255,255,255,.05);
+border:1px solid rgba(255,255,255,.08);
+text-align:center;">
+<h2 style="color:#fff;margin-bottom:15px;">YA ESTÁS DENTRO.</h2>
+<p style="font-size:1.15rem;line-height:1.8;color:#eaeaea;max-width:850px;margin:auto;">
+A partir de este momento nadie va a hacer el trabajo por vos.<br><br>
+
+No importa cómo te sientas. No importa si tenés ganas o no.
+No importa si el día fue bueno o malo.<br><br>
+
+Tu misión es simple: <b>cumplir.</b><br><br>
+
+Entrená cuando no tengas ganas. Actuá cuando otros busquen excusas.
+Mantené tu palabra cuando sea incómodo.<br><br>
+
+La disciplina no se demuestra en los días fáciles.
+Se demuestra cuando nadie te está mirando.<br><br>
+
+Cada video que completes. Cada hábito que construyas.
+Cada acción que ejecutes te acerca a la versión de vos mismo que pocos están dispuestos a convertirse.<br><br>
+
+<b>No entraste acá para ser uno más.</b><br><br>
+
+Entraste para desarrollar una mentalidad fuerte, controlar tus impulsos y convertirte en alguien que termina lo que empieza.<br><br>
+
+<b>Ahora cerrá las distracciones.<br>
+Elegí una lección.<br>
+Y cumplí la misión. ⚔️</b><br><br>
+
+<b>Ya estás dentro. Es hora de ir a por todo.</b>
+</p>
+</div>
+
+<div id="reprograma" class="section">
+<button class="btn" onclick="show('primeros')">PRIMEROS PASOS</button>
+<button class="btn" onclick="show('vicios')">VICIOS</button>
+<button class="btn" onclick="show('mentalidad')">MENTALIDAD INQUEBRANTABLE</button>
+<button class="btn" onclick="show('tentaciones')">TENTACIONES</button>
+</div>
+
+<div id="sala" class="section">
+<button class="btn" onclick="show('sufrimiento')">EL SUFRIMIENTO ES EL CAMINO</button>
+<button class="btn" onclick="show('nopares')">NO PARES HASTA CONSEGUIRLO</button>
+<button class="btn" onclick="show('elite')">MENTALIDAD ELITE</button>
+</div>
+
+
+
+<div id="primeros" class="section"><h2>Primeros Pasos</h2>
+
+<div class="video">
+<h3 class="video-title">POR QUE 5AM?</h3>
+<div class="cover-thumb" onclick="playVideo('https://www.youtube.com/embed/CIfcNSIM3NQ','Primeros Pasos 01')"></div>
+</div>
+
+<div class="video">
+<h3 class="video-title">CUANDO ENTRENAR?</h3>
+<div class="cover-thumb" onclick="playVideo('https://www.youtube.com/embed/ryo93EoZhMc','Primeros Pasos 02')"></div>
+</div>
+
+<div class="video">
+<h3 class="video-tlle">ELIMINA TU ENTORNO</h3>
+<div class="cover-thumb" onclick="playVideo('https://www.youtube.com/embed/hRFgz6CoTZk','Primeros Pasos 03')"></div>
+</div>
+
+<div class="video">
+<h3 class="video-title">CUAL ES TU INTENCION?</h3>
+<div class="cover-thumb" onclick="playVideo('https://www.youtube.com/embed/m-R5gyHwvAY','Primeros Pasos 04')"></div>
+</div>
+
+<div class="video">
+<h3 class="video-title">LEY DE ATRACCION</h3>
+<div class="cover-thumb" onclick="playVideo('https://www.youtube.com/embed/NjiMupf6zCo','Primeros Pasos 05')"></div>
+</div>
+
+<div class="video">
+<h3 class="video-title">COMO CONSTRUIR HABITOS</h3>
+<div class="cover-thumb" onclick="playVideo('https://www.youtube.com/embed/YZMwyDZmoKA','Primeros Pasos 06')"></div>
+</div>
+
+<div class="video">
+<h3 class="video-title">RESULTADO O PROCESO?</h3>
+<div class="cover-thumb" onclick="playVideo('https://www.youtube.com/embed/oCjEtc4IOXI','Primeros Pasos 07')"></div>
+</div>
+</div>
+
+
+<div id="vicios" class="section"><h2>Vicios</h2>
+
+<div class="video">
+<h3 class="video-title">VICIOS</h3>
+<div class="cover-thumb" onclick="playVideo('https://www.youtube.com/embed/Qro18Fc1Fr0','Vicios')"></div>
+</div>
+
+</div>
+
+<div id="mentalidad" class="section"><h2>Mentalidad Inquebrantable</h2>
+<div class="video">Video 1</div><div class="video">Video 2</div><div class="video">Video 3</div><div class="video">Video 4</div><div class="video">Video 5</div><div class="video">Video 6</div><div class="video">Video 7</div><div class="video">Video 8</div>
+</div>
+
+<div id="tentaciones" class="section"><h2>Tentaciones</h2><div class="video">tentaciones-01.mp4</div><div class="video">tentaciones-02.mp4</div><div class="video">tentaciones-03.mp4</div>
+</div>
+
+<div id="sufrimiento" class="section"><h2>El Sufrimiento es el Camino</h2>
+<div class="video">Video 1</div><div class="video">Video 2</div><div class="video">Video 3</div><div class="video">Video 4</div><div class="video">Video 5</div><div class="video">Video 6</div>
+</div>
+
+<div id="nopares" class="section"><h2>No Pares Hasta Conseguirlo</h2>
+<div class="video">Video 1</div><div class="video">Video 2</div><div class="video">Video 3</div><div class="video">Video 4</div><div class="video">Video 5</div>
+</div>
+
+<div id="elite" class="section"><h2>Mentalidad Elite</h2>
+<div class="video">Video 1</div><div class="video">Video 2</div><div class="video">Video 3</div><div class="video">Video 4</div><div class="video">Video 5</div><div class="video">Video 6</div><div class="video">Video 7</div><div class="video">Video 8</div>
+</div>
+
+
+<div id="playerSection" class="section">
+<h2 id="videoTitle">Clase</h2>
+<iframe id="youtubePlayer" width="100%" height="500" src="" allow="autoplay; encrypted-media"
+frameborder="0" allowfullscreen></iframe>
+</div>
+
+</div>
+
+<a href="https://wa.me/542617078932" target="_blank" id="waSupport"
+style="position:fixed;bottom:20px;right:20px;z-index:99999;
+background:#25D366;color:white;text-decoration:none;
+width:65px;height:65px;border-radius:50%;
+display:flex;align-items:center;justify-content:center;
+font-size:32px;box-shadow:0 8px 25px rgba(0,0,0,.35);">
+💬
+</a>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+
+  document.querySelectorAll('.cover-thumb').forEach((el,index)=>{
+      const key='video_'+index;
+
+      if(localStorage.getItem(key)==='visto'){
+          el.style.outline='4px solid #4CAF50';
+          const badge=document.createElement('div');
+          badge.innerHTML='✓ COMPLETADO';
+          badge.style.cssText='position:absolute;top:10px;right:10px;background:#4CAF50;color:white;padding:6px 10px;border-radius:8px;font-weight:bold;font-size:12px;';
+          el.appendChild(badge);
+      }
+
+      el.addEventListener('click',()=>{
+          localStorage.setItem(key,'visto');
+      });
+  });
+
+});
+</script>
+
+</body>
+</html>

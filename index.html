@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gonza Mindset 4.0 Cinematográfica</title>
+<link href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#000000;color:#ffffff;font-family:Inter,sans-serif;overflow-x:hidden}
+nav{position:fixed;top:0;width:100%;padding:24px 8%;display:flex;justify-content:space-between;z-index:100;background:rgba(0,0,0,.35);backdrop-filter:blur(14px)}
+nav a{color:#ffffff;text-decoration:none;font-weight:600}
+.hero{
+min-height:100vh;display:flex;align-items:center;padding:0 8%;
+background:
+linear-gradient(to right,rgba(0,0,0,.85),rgba(0,0,0,.35)),
+radial-gradient(circle at top right,#6b5310 0%,transparent 25%),
+url('sobre1.jpg') center/cover;
+}
+.hero-content{max-width:750px}
+.kicker{color:#ffffff;letter-spacing:4px;text-transform:uppercase}
+h1{font-family:Inter,sans-serif;font-size:clamp(4rem,10vw,8rem);line-height:.9;font-weight:700;margin:20px 0}
+.hero p{font-size:1.2rem;line-height:1.9;color:#ffffff}
+.btn{display:inline-block;margin-top:30px;padding:18px 34px;border-radius:999px;background:#c00000;color:#ffffff;text-decoration:none;font-weight:700}
+section{padding:120px 8%}
+.title{font-size:3rem;margin-bottom:40px}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.about p{line-height:2;color:#ffffff}
+.slider{overflow:hidden}
+.track{display:flex;gap:16px;width:max-content;animation:slide 30s linear infinite}
+.track img{width:280px;height:380px;object-fit:cover;border-radius:24px}
+@keyframes slide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:30px}
+.card{background:rgba(20,20,20,.95);backdrop-filter:blur(10px);border:1px solid rgba(0,0,0,.08);box-shadow:0 15px 40px rgba(0,0,0,.08);border-radius:28px;overflow:hidden;transition:.4s}
+.card:hover{transform:translateY(-12px)}
+.card img{width:100%;height:360px;object-fit:cover}
+.card div{padding:24px}
+.card h3{color:#ffffff;margin-bottom:10px}
+.quote{
+text-align:center;padding:120px 10%;
+font-size:2rem;line-height:1.6;color:#ffffff;
+background:linear-gradient(180deg,#050505,#111,#050505);
+}
+.membership{background:#0f0f0f;border:1px solid #282828;border-radius:32px;padding:60px;text-align:center}
+.actions{display:flex;justify-content:center;gap:25px;flex-wrap:wrap;margin:30px 0}
+.action{padding:16px 24px;border:1px solid #c00000;color:#ffffff;background:#c00000;text-decoration:none;border-radius:14px}
+footer{text-align:center;padding:50px;color:#ffffff}
+@media(max-width:900px){.about{grid-template-columns:1fr}}
+
+body{
+background:
+linear-gradient(rgba(0,0,0,.92),rgba(0,0,0,.92)),
+url('https://www.transparenttextures.com/patterns/marble.png');
+}
+nav{background:rgba(0,0,0,.9)!important;border-bottom:1px solid rgba(192,0,0,.4)}
+.hero{
+background:
+linear-gradient(to right,rgba(0,0,0,.92),rgba(0,0,0,.55)),
+url('sobre1.jpg') center/cover!important;
+}
+.title,h1,h2,h3{letter-spacing:-1px}
+.membership{
+background:rgba(10,10,10,.95)!important;
+box-shadow:0 25px 60px rgba(0,0,0,.08);
+border:1px solid rgba(192,0,0,.35)!important;
+}
+.card:hover{transform:translateY(-12px) scale(1.02)}
+.btn{box-shadow:0 12px 30px rgba(0,0,0,.18)}
+</style>
+</head>
+<body>
+
+<nav>
+<a href="#">GONZA MINDSET</a>
+<a href="#privado">MEMBRESÍA</a>
+</nav>
+
+<section class="hero">
+<div class="hero-content">
+<div class="kicker">SOLO PARA HOMBRES QUE QUIEREN MÁS</div>
+<h1>TU PEOR ENEMIGO<br>NO ES EL MUNDO<br>SON TUS EXCUSAS</h1>
+<p>Cada día que seguís procrastinando, alguien más toma las oportunidades que vos dejás pasar. Eliminá los vicios. Construí disciplina. Convertite en el hombre que impone respeto cuando entra a una habitación.</p>
+<a class="btn" href="#privado">QUIERO DEJAR DE PERDER TIEMPO</a>
+</div>
+</section>
+
+<section>
+<h2 class="title">Sobre Mí</h2>
+<div class="about">
+<div>
+<p>La mayoría de las personas viven atrapadas en hábitos que destruyen su potencial. Mi nombre es Gonzalo, tengo 21 años y soy un chico como cualquier otro, proveniente de una familia normal. Mi meta es ayudarte a salir de los vicios, la depresión, la ansiedad y de todo entorno negativo que te esté frenando en tu vida.<br><br>
+Quiero que puedas superar y afrontar cada obstáculo con el mindset que he forjado para que te vuelvas imparable.<br><br>
+Un mindset indestructible que te impulse a darlo todo en cada área de tu vida: física, mental, económica y espiritual.</p>
+</div>
+<div class="slider">
+<div class="track">
+<img src="sobre1.jpg.jpeg"><img src="sobre2.jpg.jpeg"><img src="sobre3.jpg.jpeg"><img src="sobre4.jpg.jpeg"><img src="sobre5.jpg.jpeg"><img src="sobre6.jpg.jpeg"><img src="sobre7.jpg.jpeg">
+<img src="sobre1.jpg.jpeg"><img src="sobre2.jpg.jpeg"><img src="sobre3.jpg.jpeg"><img src="sobre4.jpg.jpeg"><img src="sobre5.jpg.jpeg"><img src="sobre6.jpg.jpeg"><img src="sobre7.jpg.jpeg">
+</div></div>
+</div>
+</section>
+
+<section class="quote">
+“Dentro de 5 años vas a ser el resultado de las decisiones que tomes hoy. Elegí si querés orgullo o arrepentimiento.”
+</section>
+<section class="video-section">
+  <div style="max-width:900px;margin:60px auto;padding:0 20px;">
+    <iframe
+      width="100%"
+      height="500"
+      src="https://www.youtube.com/embed/m7ZFleqG55s?autoplay=1&mute=1&rel=0"
+      style="border-radius:24px;"
+      title="Video Motivacional"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen>
+    </iframe>
+  </div>
+</section>
+
+
+<section>
+<h2 class="title">LO QUE TE ESTÁ FALTANDO</h2>
+<div class="cards">
+<div class="card"><img src="disciplina.jpg.jpeg"><div><h3>DISCIPLINA BRUTAL</h3><p>Acción constante incluso cuando no tenés motivación.</p></div></div>
+<div class="card"><img src="mentalidad.jpg.jpeg"><div><h3>CONTROL TOTAL</h3><p>Control emocional, enfoque y resiliencia.</p></div></div>
+<div class="card"><img src="crecimiento.jpg.jpeg"><div><h3>EVOLUCIÓN</h3><p>Transformación física, mental y económica.</p></div></div>
+</div>
+</section>
+
+
+<section style="padding:120px 8%;">
+<h2 class="title" style="text-align:center;">EL MÉTODO GONZA MINDSET</h2>
+
+<div class="cards">
+<div class="card">
+<div>
+<h3>01. ELIMINAR</h3>
+<p>Vicios, procrastinación, distracciones y hábitos que destruyen tu potencial.</p>
+</div>
+</div>
+
+<div class="card">
+<div>
+<h3>02. CONSTRUIR</h3>
+<p>Disciplina, hábitos sólidos, confianza y una mentalidad capaz de soportar presión.</p>
+</div>
+</div>
+
+<div class="card">
+<div>
+<h3>03. ESCALAR</h3>
+<p>Tu físico, tu mentalidad, tus ingresos y tu capacidad para liderar tu propia vida.</p>
+</div>
+</div>
+</div>
+
+<div style="max-width:900px;margin:50px auto 0;text-align:center;font-size:1.15rem;line-height:2;">
+Esto fue lo que a mí me funcionó y los pasos que yo seguí. No existe un método externo, sino mucho trabajo interno.
+</div>
+</section>
+
+
+<section id="privado">
+<div class="membership">
+<h2 class="title">Membresía Privada</h2>
+<p>La diferencia entre seguir igual o acelerar años tu crecimiento personal puede empezar hoy.</p>
+<p style="margin-top:30px;font-size:1.1rem;font-weight:600;">LO QUE OBTENÉS AL ENTRAR</p>
+<div style="max-width:500px;margin:20px auto;text-align:left;line-height:2;color:#ffffff;">
+✅ Llamada 1-1 semanal<br>
+✅ Contacto WhatsApp 24/7<br>
+✅ Cómo eliminar vicios<br>
+✅ Crea la disciplina de la que nadie habla<br>
+✅ Crea hábitos de ganador<br>
+✅ Llamada grupal semanal<br>
+✅ +40 clases con la mentalidad inquebrantable<br>
+✅ Comunidad de WhatsApp privada
+</div>
+
+<div class="actions">
+<a class="action" href="https://mpago.la/2jTAAsm">Mercado Pago</a>
+<a class="action" href="https://wa.me/542617078932">Transferencia</a>
+</div>
+
+<div style="margin-top:25px;">
+<a class="btn" href="#" onclick="accesoPrivado()">🔒 ÁREA PRIVADA</a>
+</div>
+
+<div style="margin-top:40px;padding:25px;border:1px solid #c00000;border-radius:20px;max-width:700px;margin-left:auto;margin-right:auto;">
+<p style="font-size:1.1rem;line-height:1.8;">
+Si estás iniciando, mirá mi contenido en YouTube y cuando estés listo mandame un DM.
+</p>
+<a class="btn" href="https://youtube.com/@gonzaenriquez3?si=YKvj180zY0NclUur" target="_blank">
+VER RESULTADOS Y CONTENIDO GRATUITO
+</a>
+</div>
+
+
+<div style="margin-top:40px;padding:30px;border:2px solid #c00000;border-radius:20px;background:#120000;">
+<h3 style="font-size:2rem;margin-bottom:15px;">⚠️ SEGUÍR IGUAL TAMBIÉN TIENE UN COSTO</h3>
+<p style="line-height:2;font-size:1.1rem;">
+Más tiempo perdido. Más oportunidades desperdiciadas. Más años viendo cómo otros avanzan mientras vos seguís prometiendo que vas a cambiar "algún día".
+</p>
+<p style="margin-top:15px;font-weight:700;font-size:1.2rem;">
+La pregunta no es si podés permitirte entrar. La pregunta es cuánto te está costando quedarte donde estás.
+</p>
+</div>
+</div>
+</section>
+
+<footer>© 2026 Gonza Mindset Cinematic
+
+</footer>
+
+<script>
+function accesoPrivado(){
+const clave=prompt("Introduce la clave de acceso:");
+if(clave==="ganz333"){window.location.href="area_privada_45_videos.html";}
+else if(clave!==null){alert("Contraseña incorrecta o membresía vencida.");}
+}
+</script>
+</body></html>

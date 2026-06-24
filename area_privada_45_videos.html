@@ -1,0 +1,368 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<title>Área Privada Gonza Mindset</title>
+<style>
+body{
+background:
+linear-gradient(135deg, rgba(255,255,255,.98), rgba(240,240,240,.96)),
+repeating-linear-gradient(115deg,
+rgba(0,0,0,.035) 0px,
+rgba(0,0,0,.035) 2px,
+transparent 2px,
+transparent 90px),
+repeating-linear-gradient(25deg,
+rgba(0,0,0,.02) 0px,
+rgba(0,0,0,.02) 1px,
+transparent 1px,
+transparent 120px);
+
+background:
+linear-gradient(135deg,#000000,#111111 50%,#1a1a1a);
+color:#fff;
+font-family:'Poppins',Arial,sans-serif;background-attachment:fixed;
+margin:0;
+}
+header{text-align:center;padding:100px 20px 60px;background:linear-gradient(180deg,rgba(212,175,55,.15),transparent)}
+.container{max-width:1400px;margin:auto;padding:30px}
+.btn{
+background:linear-gradient(135deg,#d4af37,#b8860b);
+color:#111;
+text-transform:uppercase;
+letter-spacing:1px;
+box-shadow:0 15px 45px rgba(212,175,55,.18);
+backdrop-filter:blur(10px);
+border:1px solid rgba(60,60,60,.20);
+
+display:inline-flex;width:calc(33% - 16px);min-width:280px;padding:24px;margin:8px;justify-content:center;align-items:center;
+font-size:1.5rem;font-weight:bold;border:none;border-radius:20px;
+background:linear-gradient(135deg,#d4af37,#b8860b);color:#fff;cursor:pointer;border:1px solid #d4af37
+}
+.btn{transition:all .25s ease}.btn:hover{transform:translateY(-3px);filter:brightness(1.08);box-shadow:0 18px 40px rgba(212,175,55,.35)}
+.section{display:none}
+.video{
+background:rgba(10,10,10,.82);backdrop-filter:blur(12px);
+border:1px solid rgba(212,175,55,.35);
+border-radius:22px;
+box-shadow:0 18px 40px rgba(0,0,0,.55);
+padding:18px;margin:10px 0
+}
+
+.back-arrow{
+position:fixed;
+top:20px;
+left:20px;
+font-size:40px;
+color:#d4af37;
+cursor:pointer;
+font-weight:bold;
+z-index:9999;
+display:none;
+}
+
+
+.video-title{
+color:#d4af37;
+font-size:1.3rem;
+font-weight:700;
+margin-bottom:12px;
+text-align:center;
+letter-spacing:1px;
+}
+.cover-thumb{
+background:url('primeros-pasos-portada.png') center/cover no-repeat;
+height:260px;
+border-radius:22px;
+cursor:pointer;
+position:relative;
+border:1px solid rgba(212,175,55,.35);
+}
+.cover-thumb:after{
+content:'▶';
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+font-size:72px;
+color:white;
+text-shadow:0 0 12px #000;
+}
+
+
+header h1{text-shadow:0 0 25px rgba(212,175,55,.25);}
+.container{padding-bottom:60px}
+.cover-thumb{overflow:hidden}
+.cover-thumb:hover{transform:scale(1.01);transition:.25s}
+body:before{content:'';position:fixed;inset:0;pointer-events:none;background:radial-gradient(circle at top,rgba(212,175,55,.08),transparent 45%);}
+</style>
+<script>
+function show(id){
+document.querySelectorAll('.section').forEach(s=>s.style.display='none');
+document.getElementById(id).style.display='block';
+}
+
+let historial = ['home'];
+
+function volver(){
+    document.getElementById('youtubePlayer').src='';
+    if(historial.length > 1){
+        historial.pop();
+        const anterior = historial[historial.length - 1];
+        document.querySelectorAll('.section').forEach(s=>s.style.display='none');
+        document.getElementById(anterior).style.display='block';
+        document.getElementById('backArrow').style.display =
+            (anterior === 'home') ? 'none' : 'block';
+    }
+}
+
+const originalShow = show;
+show = function(id){
+    document.querySelectorAll('.section').forEach(s=>s.style.display='none');
+    document.getElementById(id).style.display='block';
+
+    if(historial[historial.length - 1] !== id){
+        historial.push(id);
+    }
+
+    document.getElementById('backArrow').style.display =
+        (id === 'home') ? 'none' : 'block';
+}
+
+</script>
+
+<script>
+function playVideo(url,titulo){
+const actual = historial[historial.length-1];
+if(actual !== 'playerSection'){
+    historial.push('playerSection');
+}
+document.querySelectorAll('.section').forEach(s=>s.style.display='none');
+document.getElementById('playerSection').style.display='block';
+document.getElementById('videoTitle').innerText=titulo;
+document.getElementById('backArrow').style.display='block';
+document.getElementById('youtubePlayer').src=url + (url.includes('?') ? '&' : '?') + 'autoplay=1&rel=0';
+}
+</script>
+</head>
+
+<body><div id="backArrow" class="back-arrow" onclick="volver()">←</div>
+<header>
+<h1 style="font-size:4rem;margin-bottom:10px;">🔒 Área Privada Gonza Mindset</h1>
+<p style="color:#d4af37;font-size:1.2rem;letter-spacing:3px;">
+DISCIPLINA • ENFOQUE • MENTALIDAD ELITE
+</p>
+
+<div style="width:120px;height:4px;background:#444;margin:20px auto;border-radius:50px;"></div>
+</header>
+
+<div class="container">
+
+<div id="home" class="section" style="display:block">
+<button class="btn" onclick="show('reprograma')">Reprograma Tu Mente</button>
+<button class="btn" onclick="show('sala')">Sala de Mindset</button>
+
+<div style="margin-top:30px;padding:30px;background:rgba(0,0,0,.45);border:1px solid #b8860b;border-radius:20px;line-height:1.8;color:#fff;">
+<h2 style="color:#d4af37;">YA ESTÁS DENTRO.</h2>
+<p>A partir de este momento nadie va a hacer el trabajo por vos.</p>
+<p>No importa cómo te sientas. No importa si tenés ganas o no. No importa si el día fue bueno o malo.</p>
+<p>Tu misión es simple: cumplir.</p>
+<p>Entrená cuando no tengas ganas. Actuá cuando otros busquen excusas. Mantené tu palabra cuando sea incómodo.</p>
+<p>La disciplina no se demuestra en los días fáciles. Se demuestra cuando nadie te está mirando.</p>
+<p>Cada video que completes. Cada hábito que construyas. Cada acción que ejecutes te acerca a la versión de vos mismo que pocos están dispuestos a convertirse.</p>
+<p>No entraste acá para ser uno más.</p>
+<p>Entraste para desarrollar una mentalidad fuerte, controlar tus impulsos y convertirte en alguien que termina lo que empieza.</p>
+<p>Ahora cerrá las distracciones.<br>Elegí una lección.<br>Y cumplí la misión. ⚔️</p>
+<p><strong>Ya estás dentro. Es hora de ir a por todo.</strong></p>
+</div>
+
+</div>
+
+<div id="reprograma" class="section">
+<button class="btn" onclick="show('primeros')">PRIMEROS PASOS</button>
+<button class="btn" onclick="show('vicios')">VICIOS</button>
+<button class="btn" onclick="show('mentalidad')">MENTALIDAD INQUEBRANTABLE</button>
+<button class="btn" onclick="show('tentaciones')">TENTACIONES</button>
+</div>
+
+<div id="sala" class="section">
+<button class="btn" onclick="show('sufrimiento')">EL SUFRIMIENTO ES EL CAMINO</button>
+<button class="btn" onclick="show('nopares')">NO PARES HASTA CONSEGUIRLO</button>
+<button class="btn" onclick="show('elite')">MENTALIDAD ELITE</button>
+</div>
+
+
+
+<div id="primeros" class="section"><h2>Primeros Pasos</h2>
+
+<div class="video">
+<h3 class="video-title">POR QUE 5AM?</h3>
+<div class="cover-thumb" onclick="playVideo('https://www.youtube.com/embed/CIfcNSIM3NQ','Primeros Pasos 01')"></div>
+</div>
+
+<div class="video">
+<h3 class="video-title">CUANDO ENTRENAR?</h3>
+<div class="cover-thumb" onclick="playVideo('https://www.youtube.com/embed/ryo93EoZhMc','Primeros Pasos 02')"></div>
+</div>
+
+<div class="video">
+<h3 class="video-tlle">ELIMINA TU ENTORNO</h3>
+<div class="cover-thumb" onclick="playVideo('https://www.youtube.com/embed/hRFgz6CoTZk','Primeros Pasos 03')"></div>
+</div>
+
+<div class="video">
+<h3 class="video-title">CUAL ES TU INTENCION?</h3>
+<div class="cover-thumb" onclick="playVideo('https://www.youtube.com/embed/m-R5gyHwvAY','Primeros Pasos 04')"></div>
+</div>
+
+<div class="video">
+<h3 class="video-title">LEY DE ATRACCION</h3>
+<div class="cover-thumb" onclick="playVideo('https://www.youtube.com/embed/NjiMupf6zCo','Primeros Pasos 05')"></div>
+</div>
+
+<div class="video">
+<h3 class="video-title">COMO CONSTRUIR HABITOS</h3>
+<div class="cover-thumb" onclick="playVideo('https://www.youtube.com/embed/YZMwyDZmoKA','Primeros Pasos 06')"></div>
+</div>
+
+<div class="video">
+<h3 class="video-title">RESULTADO O PROCESO?</h3>
+<div class="cover-thumb" onclick="playVideo('https://www.youtube.com/embed/oCjEtc4IOXI','Primeros Pasos 07')"></div>
+</div>
+</div>
+
+
+<div id="vicios" class="section"><h2>Vicios</h2>
+
+<div class="video">
+<h3 class="video-title">VICIOS</h3>
+<div class="cover-thumb" onclick="playVideo('https://www.youtube.com/embed/Qro18Fc1Fr0','Vicios')"></div>
+</div>
+
+</div>
+
+
+<div id="mentalidad" class="section"><h2>Mentalidad Inquebrantable</h2>
+
+<div class="video">
+<h3 class="video-title">MINDSET</h3>
+<div class="cover-thumb" onclick="playVideo('https://www.youtube.com/embed/PwGkL1yQZOQ','Mindset')"></div>
+</div>
+
+<div class="video">
+<h3 class="video-title">DISCIPLINA</h3>
+<div class="cover-thumb" onclick="playVideo('https://www.youtube.com/embed/eSJuz4IlTG8','Disciplina')"></div>
+</div>
+
+<div class="video">
+<h3 class="video-title">EL MIEDO</h3>
+<div class="cover-thumb" onclick="playVideo('https://www.youtube.com/embed/gCbM821ToL0','El miedo')"></div>
+</div>
+
+<div class="video">
+<h3 class="video-title">CUÁL DEBE SER TU NIVEL DE ACCIÓN</h3>
+<div class="cover-thumb" onclick="playVideo('https://www.youtube.com/embed/BkxfQ_Q62rk','Cuál debe ser tu nivel de acción')"></div>
+</div>
+
+<div class="video">
+<h3 class="video-title">LA IMPORTANCIA DE LA CONSTANCIA</h3>
+<div class="cover-thumb" onclick="playVideo('https://www.youtube.com/embed/S83zMimM81Y','La importancia de la constancia')"></div>
+</div>
+
+<div class="video">
+<h3 class="video-title">DEBES SER AGRESIVO</h3>
+<div class="cover-thumb" onclick="playVideo('https://www.youtube.com/embed/RxOg9UZg80k','Debes ser agresivo')"></div>
+</div>
+
+<div class="video">
+<h3 class="video-title">DA EL EJEMPLO</h3>
+<div class="cover-thumb" onclick="playVideo('https://www.youtube.com/embed/qGwv2SICdKQ','Da el ejemplo')"></div>
+</div>
+
+<div class="video">
+<h3 class="video-title">¿A QUIÉN ESTÁS ESCUCHANDO?</h3>
+<div class="cover-thumb" onclick="playVideo('https://www.youtube.com/embed/VcdWU1-51xE','¿A quién estás escuchando?')"></div>
+</div>
+
+<div class="video">
+<h3 class="video-title">LO QUE TE RECOMIENDO LEER</h3>
+<div class="cover-thumb" onclick="playVideo('https://www.youtube.com/embed/q5dOJlXYqR0','Lo que te recomiendo leer')"></div>
+</div>
+
+</div>
+
+
+<div id="tentaciones" class="section"><h2>Tentaciones</h2>
+
+<div class="video">
+<h3 class="video-title">EVITA CAER EN LAS TENTACIONES</h3>
+<div class="cover-thumb" onclick="playVideo('https://www.youtube.com/embed/HuimydpO4fY','Evita caer en las tentaciones')"></div>
+</div>
+
+<div class="video">
+<h3 class="video-title">POR QUE NO SOS TENTADO?</h3>
+<div class="cover-thumb" onclick="playVideo('https://www.youtube.com/embed/Bbbm8UFitvo','Por que no sos tentado?')"></div>
+</div>
+
+</div>
+
+<div id="sufrimiento" class="section"><h2>El Sufrimiento es el Camino</h2>
+
+<div class="video"><h3 class="video-title">NO TE PREOCUPES POR EL COMO</h3><div class="cover-thumb" onclick="playVideo('https://www.youtube.com/embed/EDvCLQWNiSg','No te preocupes por el como')"></div></div>
+<div class="video"><h3 class="video-title">LA COMODIDAD TE ESTÁ FRENANDO</h3><div class="cover-thumb" onclick="playVideo('https://www.youtube.com/embed/rbE7FUoZwv4','La comodidad te está frenando')"></div></div>
+<div class="video"><h3 class="video-title">QUEMA LOS BARCOS</h3><div class="cover-thumb" onclick="playVideo('https://www.youtube.com/embed/Xy-mRhRPB_Q','Quema los barcos')"></div></div>
+<div class="video"><h3 class="video-title">DIOS TE ESTÁ PREPARANDO</h3><div class="cover-thumb" onclick="playVideo('https://www.youtube.com/embed/rxABcMxPLp4','Dios te está preparando')"></div></div>
+<div class="video"><h3 class="video-title">SUFRIMIENTO = CRECIMIENTO</h3><div class="cover-thumb" onclick="playVideo('https://www.youtube.com/embed/oBh4nOVRlNs','Sufrimiento = Crecimiento')"></div></div>
+<div class="video"><h3 class="video-title">NO CUESTIONES Y APLICA</h3><div class="cover-thumb" onclick="playVideo('https://www.youtube.com/embed/ws5tDsXDSaY','No cuestiones y aplica')"></div></div>
+
+</div>
+
+<div id="nopares" class="section"><h2>No Pares Hasta Conseguirlo</h2>
+
+<div class="video">
+<h3 class="video-title">DESGLOSA LA META PRINCIPAL</h3>
+<div class="cover-thumb" onclick="playVideo('https://www.youtube.com/embed/U0fP5j97XMc','Desglosa la meta principal')"></div>
+</div>
+
+<div class="video">
+<h3 class="video-title">NO PIENSES EN OTRA COSA</h3>
+<div class="cover-thumb" onclick="playVideo('https://www.youtube.com/embed/UyH96ErIhDU','No pienses en otra cosa')"></div>
+</div>
+
+<div class="video">
+<h3 class="video-title">HACE DE CUENTA QUE YA LO TENÉS</h3>
+<div class="cover-thumb" onclick="playVideo('https://www.youtube.com/embed/bT2k-ZZzEfA','Hace de cuenta que ya lo tenés')"></div>
+</div>
+
+<div class="video">
+<h3 class="video-title">PIDE PERMISO, SINO ROMPE LA PUERTA</h3>
+<div class="cover-thumb" onclick="playVideo('https://www.youtube.com/embed/aaNEgNp9GgE','Pide permiso, sino rompe la puerta')"></div>
+</div>
+
+<div class="video">
+<h3 class="video-title">SI EXISTE UN PLAN B YA PERDISTE</h3>
+<div class="cover-thumb" onclick="playVideo('https://www.youtube.com/embed/kj6QTKl_JeQ','Si existe un plan B ya perdiste')"></div>
+</div>
+
+</div>
+
+<div id="elite" class="section"><h2>Mentalidad Elite</h2>
+<div class="video">Video 1</div><div class="video">Video 2</div><div class="video">Video 3</div><div class="video">Video 4</div><div class="video">Video 5</div><div class="video">Video 6</div><div class="video">Video 7</div><div class="video">Video 8</div>
+</div>
+
+
+<div id="playerSection" class="section">
+<h2 id="videoTitle">Clase</h2>
+<iframe id="youtubePlayer" width="100%" height="500" src="" allow="autoplay; encrypted-media"
+frameborder="0" allowfullscreen></iframe>
+</div>
+
+</div>
+
+<a href="https://wa.me/542617078932" target="_blank" style="position:fixed;bottom:25px;right:25px;background:#25D366;color:white;width:65px;height:65px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:32px;text-decoration:none;z-index:99999;box-shadow:0 0 20px rgba(0,0,0,.4);">💬</a>
+</body>
+
+</html>

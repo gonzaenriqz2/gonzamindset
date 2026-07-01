@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>GONZA MINDSET</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="blur blur1"></div>
+<div class="blur blur2"></div>
+
+<header>
+
+<nav>
+
+<div class="logo">
+
+GONZA
+<span>MINDSET</span>
+
+</div>
+
+<ul>
+
+<li><a href="#inicio">Inicio</a></li>
+
+<li><a href="#sobre">Sobre mí</a></li>
+
+<li><a href="#metodo">Método</a></li>
+
+<li><a href="#videos">Videos</a></li>
+
+<li><a href="#privado">Membresía</a></li>
+
+</ul>
+
+<a class="nav-btn" href="#privado">
+
+EMPEZAR
+
+</a>
+
+</nav>
+
+</header>
+
+<section class="hero" id="inicio">
+
+<div class="hero-left">
+
+<p class="tag">
+
+MENTALIDAD • DISCIPLINA • ACCIÓN
+
+</p>
+
+<h1>
+
+CONSTRUÍ UN
+<span>HOMBRE</span>
+INQUEBRANTABLE
+
+</h1>
+
+<p>
+
+Cada decisión que tomás hoy define la persona que vas a ser dentro de cinco años.
+
+No esperes el momento perfecto.
+
+Crealo.
+
+</p>
+
+<div class="hero-buttons">
+
+<a href="#privado" class="btn">
+
+UNIRME
+
+</a>
+
+<a href="#sobre" class="btn2">
+
+CONOCER MÁS
+
+</a>
+
+</div>
+
+</div>
+
+<div class="hero-right">
+
+<img src="sobre1.jpg">
+
+</div>
+
+</section>
+
+<section id="sobre">
+
+<div class="section-title">
+
+<h2>
+
+SOBRE MÍ
+
+</h2>
+
+<p>
+
+No nací siendo disciplinado.
+
+Construí esa mentalidad paso a paso.
+
+</p>
+
+</div>
+
+<div class="about-grid">
+
+<div>
+
+<h3>
+
+Mi Historia
+
+</h3>
+
+<p>
+
+Mi nombre es Gonzalo.
+
+Tengo 21 años y decidí transformar completamente mi vida.
+
+Entendí que los vicios, la procrastinación y el miedo solamente destruyen nuestro potencial.
+
+Por eso desarrollé un sistema basado en disciplina, responsabilidad y acción constante.
+
+Hoy quiero ayudarte a hacer exactamente lo mismo.
+
+</p>
+
+</div>
+
+<div class="gallery">
+
+<img src="sobre2.jpg.jpeg">
+
+<img src="sobre3.jpg.jpeg">
+
+<img src="sobre4.jpg.jpeg">
+
+<img src="sobre5.jpg.jpeg">
+
+<img src="sobre6.jpg.jpeg">
+
+<img src="sobre7.jpg.jpeg">
+
+</div>
+
+</div>
+
+</section>
+
+<section class="numbers">
+
+<div>
+
+<h2>
+
+40+
+
+</h2>
+
+<p>
+
+Clases privadas
+
+</p>
+
+</div>
+
+<div>
+
+<h2>
+
+24/7
+
+</h2>
+
+<p>
+
+Soporte
+
+</p>
+
+</div>
+
+<div>
+
+<h2>
+
+1-1
+
+</h2>
+
+<p>
+
+Mentoría
+
+</p>
+
+</div>
+
+<div>
+
+<h2>
+
+100%
+
+</h2>
+
+<p>
+
+Compromiso
+
+</p>
+
+</div>
+
+</section>
+
+<section id="metodo">
+
+<div class="section-title">
+
+<h2>
+
+EL MÉTODO
+
+</h2>
+
+</div>
+
+<div class="cards">
+
+<div class="card">
+
+<h3>
+
+ELIMINAR
+
+</h3>
+
+<p>
+
+Vicios.
+
+Procrastinación.
+
+Excusas.
+
+Malos hábitos.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>
+
+CONSTRUIR
+
+</h3>
+
+<p>
+
+Disciplina.
+
+Mentalidad.
+
+Hábitos.
+
+Enfoque.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>
+
+ESCALAR
+
+</h3>
+
+<p>
+
+Ingresos.
+
+Físico.
+
+Relaciones.
+
+Propósito.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="videos">
+
+<div class="section-title">
+
+<h2>
+
+VIDEO DESTACADO
+
+</h2>
+
+</div>
+
+<div class="video">
+
+<iframe
+
+src="https://www.youtube.com/embed/m7ZFleqG55s"
+
+allowfullscreen>
+
+</iframe>
+
+</div>
+
+</section>
+
+<section id="privado">
+
+<div class="premium">
+
+<h2>
+
+MEMBRESÍA PRIVADA
+
+</h2>
+
+<p>
+
+Accedé a todas las clases, llamadas privadas, comunidad y mentoría.
+
+</p>
+
+<div class="benefits">
+
+<div>✔ Más de 40 clases</div>
+
+<div>✔ Comunidad privada</div>
+
+<div>✔ Llamadas grupales</div>
+
+<div>✔ Soporte WhatsApp</div>
+
+<div>✔ Hábitos de ganador</div>
+
+<div>✔ Eliminación de vicios</div>
+
+</div>
+
+<div class="buttons">
+
+<a href="https://mpago.la/2jTAAsm">
+
+MERCADO PAGO
+
+</a>
+
+<a href="https://wa.me/542617078932">
+
+TRANSFERENCIA
+
+</a>
+
+</div>
+
+<button onclick="accesoPrivado()">
+
+ÁREA PRIVADA
+
+</button>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>
+
+© 2026 GONZA MINDSET
+
+</p>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
